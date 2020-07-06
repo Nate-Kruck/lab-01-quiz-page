@@ -1,25 +1,14 @@
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1);
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
-    --header-height: 80px;
-    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
-    --footer-height: 25px;
     
     font-family: 'Times New Roman', Times, serif;
-    background-color: var(--color2);
+    --imperial-red: hsla(355, 75%, 90%, 1);
+    --honeydew: hsla(105, 5%, 98%, 1);
+    --powder-blue: hsla(182, 24%, 86%, 1);
+    --celadon-blue: hsla(203, 56%, 62%, 1);
+    --prussian-blue: hsla(215, 67%, 34%, 1);
+    background-color: hsla(215, 67%, 34%, 1);
 }
 
 main {
@@ -27,7 +16,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: calc(var(--footer-height)); 
 }
 
 
@@ -39,12 +28,57 @@ header {
     box-shadow: var(--shadow);
 }
 
-.about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    border: 3px solid black;
+    color: whitesmoke;
+    
 }
+
+.about-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #8D92A5;
+    color: hsl(0, 0%, 0%);hsl(0, 0%, 0%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.take-quiz {
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 5px solid #474e5d;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    transition: 1s all ease;
+}
+
+.take-quiz::before {
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.6s ease;
+}
+
+
 
 
 
