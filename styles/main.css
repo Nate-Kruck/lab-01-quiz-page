@@ -54,7 +54,7 @@ footer {
     justify-content: center;
 }
 
-.take-quiz {
+.takeQuiz {
     position: relative;
     display: block;
     color: black;
@@ -68,7 +68,7 @@ footer {
     transition: 1s all ease;
 }
 
-.take-quiz::before {
+.takeQuiz::before {
     background: #ff7675;
     content: "";
     position: absolute;
