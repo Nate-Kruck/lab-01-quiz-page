@@ -1,33 +1,46 @@
 // import functions and grab DOM elements
-import { countAsYes } from './translate-to-a-yes.js';
+import { translateToAYes } from './translate-to-a-yes.js';
 
-const takeQuiz = document.getElementById('.takeQuiz');
+const takeQuiz = document.getElementById('quiz-time');
+const result = document.getElementById('quiz-result');
 // initialize state
-takeQuiz.addEventListener('click', () => {
 
-    const username = prompt('what is your name?');
-    const testConfirm = confirm('would you like to take a quiz,  ${username}?');
-    if (!testConfirm) {
+
+function launchQuiz() {
+    let score = 0;
+
+    let name = '';
+
+    alert('hello');
+
+    const confirmed = confirm('sure you want to proceed?');
+    if (confirmed === false) {
         return;
     }
+
+    const firstName = prompt('What is your first name?');
+    name = firstName;
+
+    const lastName = prompt('What is your last name?');
+    name + ' ' + lastName;
 // set event listeners to update state and DOM
-    confirm('you sure you want to do this?');
    
     
-    const answer1 = prompt('Am I under the age of 30?');
-    if (!answer1){
-        return;
+    const answer1 = prompt('Am I under the age of 30? (yes/no)');
+    if (translateToAYes(answer1) === true) {
+        score++;
     }
 
     const answer2 = prompt('Is camping one of my hobbies?');
-    if (!answer2) {
-        return;
+    if (translateToAYes(answer2) === true) {
+        score++;
     }
-
+        
     const answer3 = prompt('Do I like Portland?');
-    if (!answer3) {
-        return;
+    if (translateToAYes(answer3) === true) {
+        score++;
     }
+    result.textContent = name + score;
+}
 
-
-});
+takeQuiz.addEventListener('click', launchQuiz);
